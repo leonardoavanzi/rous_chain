@@ -1,4 +1,4 @@
-defmodule RousChain.BlockChain.Block do
+defmodule RousChain.Blockchain.Block do
   @moduledoc """
   This module is the single block struct in a basic blockchain.
   """
@@ -40,7 +40,7 @@ defmodule RousChain.BlockChain.Block do
 
   @spec genesis() :: Block.t()
   def genesis() do
-    __MODULE__.new(1_599_909_623_805_627, "genesis-hash", "-", "genesis data")
+    __MODULE__.new(1_599_909_623_805_627, "-", "genesis data")
   end
 
   # ------------------------------------#

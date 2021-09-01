@@ -5,11 +5,11 @@ defmodule RousChain.BlockchainTest do
 
   use ExUnit.Case
 
-  alias RousChain.BlockChain
-  alias RousChain.BlockChain.Block
+  alias RousChain.Blockchain
+  alias RousChain.Blockchain.Block
 
-  describe "Blockchain" do
-    setup [:initialize_blockchain]
+  describe "BlockChain" do
+    setup [:initialize_blockChain]
 
     test "should start with the genesis block", %{blockchain: blockchain} do
       assert %Block{
@@ -28,5 +28,5 @@ defmodule RousChain.BlockchainTest do
     end
   end
 
-  defp initialize_blockchain(context), do: Map.put(context, :blockchain, Blockchain.new())
+  defp initialize_blockChain(context), do: Map.put(context, :blockchain, Blockchain.new())
 end
