@@ -14,9 +14,9 @@ defmodule RousChain.BlockchainTest do
     test "should start with the genesis block", %{blockchain: blockchain} do
       assert %Block{
                data: "genesis data",
-               hash: "F277BF9150CD035D55BA5B48CB5BCBE8E564B134E5AD0D56E439DD04A1528D3B",
+               hash: "0X0000000000000000000000000000000000000000000000000000",
                last_hash: "-",
-               timestamp: 1_599_909_623_805_627
+               timestamp: 978310861000
              } == hd(blockchain.chain)
     end
 

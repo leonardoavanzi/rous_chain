@@ -36,10 +36,10 @@ defmodule RousChain.Blockchain do
   end
 
   #private funcs
-  defp valid_last_hash?(
-    %Block{hash: hash} = _last_block,
-    %Block{last_hash: last_hash} = _rous
-  ) do
+   defp valid_last_hash?(
+         %Block{hash: hash} = _last_block,
+         %Block{last_hash: last_hash} = _current_block
+       ) do
     hash == last_hash
   end
 
@@ -66,18 +66,6 @@ defmodule RousChain.Blockchain do
     end
   end
 
-  # Private functions
-
-  defp valid_last_hash?(
-         %Block{hash: hash} = _last_block,
-         %Block{last_hash: last_hash} = _current_block
-       ) do
-    hash == last_hash
-  end
-
-  defp valid_block_hash?(current_block) do
-    current_block.hash == Block.block_hash(current_block)
-  end
 
   defp add_genesis(blockchain = %__MODULE__{}) do
     %{blockchain | chain: [Block.genesis()]}
