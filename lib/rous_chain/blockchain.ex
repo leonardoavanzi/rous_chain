@@ -35,6 +35,20 @@ defmodule RousChain.Blockchain do
     end)
   end
 
+  #private funcs
+  defp valid_last_hash?(
+    %Block{hash: hash} = _last_block,
+    %Block{last_hash: last_hash} = _rous
+  ) do
+    hash == last_hash
+  end
+
+  defp valid_block_hash?(current_block) do
+    current_block.hash == Block.block_hash(current_block)
+  end
+
+
+
   @spec replace_chain_if_longer(ExChain.Blockchain.t(), ExChain.Blockchain.t()) ::
           ExChain.Blockchain.t()
   def replace_chain_if_longer(
