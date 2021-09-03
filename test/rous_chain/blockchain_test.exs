@@ -28,5 +28,12 @@ defmodule RousChain.BlockchainTest do
     end
   end
 
+  test "validate a chain", %{blockchain: blockchain} do
+    # new block into blockchain
+    blockchain = Blockchain.add_block(blockchain, "0x0000-some-data-test-1-23-3-4-506-3")
+
+    assert Blockchain.valid_chain?(blockchain)
+  end
+
   defp initialize_blockChain(context), do: Map.put(context, :blockchain, Blockchain.new())
 end
