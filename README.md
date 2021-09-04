@@ -85,3 +85,5 @@ iex(4)> blockchain = Blockchain.add_block(blockchain, "second block data :c")
 }
 ```
 
+This was an example of how to make the principles of blockchain using Elixir.
+
