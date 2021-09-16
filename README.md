@@ -1,6 +1,7 @@
 # RousChain
 
 First of all 
+* git clone https://github.com/leonardoavanzi/rous_chain.git
 * Install dependencies with `mix deps.get`
 * Open your iex `iex -S mix`
 
