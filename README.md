@@ -6,7 +6,9 @@ First of all
 
 
 
-``alias`` allows you to set up aliases for any given module name (RousChain.Blockchain)
+``alias`` allows you to set up aliases for any given module name (RousChain.Blockchain). Also you can define the file .iex.exs in root directory so you won't need to type ``alias RousChain.Blockchain`` every time.
+
+
 
 
 ```elixir
